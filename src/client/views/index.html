@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Travel Weather App</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+
+</head>
+ <body>
+
+  <header>
+    <div class="title">
+        <h1><b>Travel Weather App</b></h1>
+        <h2>Search about your travel</h2>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-img">
+
+
+        <form class="form-inline" onsubmit="return Client.handleSubmit(event)">
+            <input id="city" type="text" name="input" value=""  placeholder="Enter city here">
+            
+            <p id="error" style="color:red;"></p>
+         
+            <input type="date" id="date" name="trip-start"
+          
+            min="2021-09-14" max="2021-12-31">
+
+            <input type="submit" id="submit" name="" value="Search"  onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+            <input type="reset" value="Remove Trip">
+         
+
+        </form>
+    </section>
+
+    <section id="result">
+
+      <img src="" alt=""  class="img1" >
+      <div class="info">
+
+        <ul>
+        
+          <li id="country"></li>
+      </ul>
+   
+      <img src="" id="icon">
+      <br>   
+      <br>
+      <p><div id="htemp"></div></p>
+      <br>
+      <p id="description"></p>
+      </div>
+      <br><br>
+   
+</section>
+</main>
+<button onclick="window.print()">Print this page</button>
+<script>
+  // Check that service workers are supported
+  
+  if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js');
+      });
+  }
+ </script>
+
+</body>
+
+
+</html>

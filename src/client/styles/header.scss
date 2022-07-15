@@ -1,0 +1,22 @@
+header {
+
+    justify-content:   space-between;
+    color:   lightsalmon;
+    background-color:lightskyblue;
+    text-align: center;
+    font-size: 60px;
+}
+
+.bg-img {
+    /* The image used */
+    background-image: url('../media/travel.png');
+
+    min-height: 380px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
